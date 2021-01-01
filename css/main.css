@@ -154,6 +154,9 @@ main {
 .event-detail {
     position: relative;
     top: -30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     width: 85%;
     height: 240px;
     margin: auto;
@@ -161,9 +164,22 @@ main {
     background-color: var(--soft-grey);
 }
 .event-description {
+    height: 80%;
+    max-height: 70%;
     font-size: 1.2rem;
     font-family: 'Roboto Mono', monospace;
     font-weight: 500;
+}
+.event-url {
+    position: relative;
+    /* bottom: -10px; */
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--dark);
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
 }
 /* aside {
     background-color: red;
@@ -203,6 +219,11 @@ footer {
     }
     .project-details {
         margin-bottom: 30px;
+    }
+    .event-list {
+        grid-template: 1fr / 1fr;
+        gap: 30px;
+        
     }
 }
 @media screen and (max-width: 480px) {
