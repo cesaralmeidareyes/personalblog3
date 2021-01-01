@@ -86,6 +86,33 @@ body {
 main {
     background-color: var(--soft-grey);
 }
+/* hero */
+.hero-setup {
+    background-color: var(--dark);
+}
+.hero {
+    display: flex;
+    /* flex-wrap: wrap; */
+    height: 300px;
+    /* padding: 0 15px; */
+    align-items: center;
+    padding: 0 30px;
+    justify-content: space-between;
+    background-color: var(--light-grey);
+}
+.hero h1 {
+    font-size: 2rem;
+    color: var(--soft-grey);
+    line-height: 4rem;
+}
+.hero h1 strong {
+    color: var(--blue);
+}
+.hero-img {
+    height: 100%;
+    object-fit: cover;
+    
+}
 /* main portfolio */
 .portfolio {
     width: 95%;
@@ -125,6 +152,7 @@ main {
     height: 100%;
     object-fit: cover;
 }
+/* video */
 /* main events */
 .events {
     width: 95%;
@@ -272,6 +300,30 @@ main {
         padding: 0;
         /* height: 50px; */
         /* text-align: center; */
+    }
+    /* main hero */
+    .hero {
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 2em;
+        justify-content: center;
+    }
+    .hero h1 {
+        font-size: 1.5rem;
+        z-index: 2;
+        background-color: #23374dc4;
+        padding: 20px;
+    }
+    .hero-img {
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /* overflow: hidden; */
     }
     /* main portfolio */
     .project {
