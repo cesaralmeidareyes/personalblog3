@@ -37,6 +37,21 @@ body {
     margin: 0 auto;
 }
 /* header */
+.burger-menu {
+    display: none;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--soft-grey);
+    text-align: center;
+    line-height: 40px;
+    background-color: var(--dark);
+    font-size: 1.8rem;
+    /* font-size: 5rem; */
+} 
 .header-setup {
     /* width: 100%; */
     background-color: var(--blue);
@@ -282,6 +297,9 @@ main {
 }
 @media screen and (max-width: 767px) {
     /* header */
+    .burger-menu {
+        display: block;
+    }
     .header {
         display: block;
         height: auto;
