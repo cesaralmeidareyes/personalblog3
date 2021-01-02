@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body class="body-fixed">
-    <i class="fas fa-bars burger-menu"></i>
+    <i class="fas fa-bars burger-menu" id="burger-menu"></i>
     <header class="header-setup">
         <div class="header wrapper">
             <a class="header__logo-link" href="#">
@@ -129,6 +129,33 @@
             <p>Curso de aprendizaje robótico 2021 <span><img src="https://cdn.pixabay.com/photo/2013/07/12/16/53/tetris-151437__340.png" width="40" alt="Logo del blog"></span></p>
             <p>Diseñado con 💙 y <span><img src="https://cdn.pixabay.com/photo/2013/07/12/16/53/tetris-151437__340.png" width="40" alt=""></span> por <a href="#">Athan</a></p>
         </div>
-    </footer>    
+    </footer>
+    <script>
+        // console.log('Hola mundo! es mi primera linea JS');
+        // console.log(window.matchMedia('screen and (max-width: 767px)'));
+        const ipad = window.matchMedia('screen and (max-width: 767px)')
+        const menu = document.querySelector('.header__menu-container');
+        // console.log(menu);
+        const burgerButton = document.querySelector('#burger-menu');
+        // console.log = burgerButton;
+        
+        ipad.addListener (validation)
+        function validation(event) {
+            if (event.matches) {
+                burgerButton.addEventListener('click', hideShow);
+            }
+            else {
+                burgerButton.removeEventListener('click', hideShow);                
+            }
+        }
+
+        function hideShow() {
+            if (menu.classList.contains('is-active')) {
+                menu.classList.remove('is-active')
+            }  else {
+                menu.classList.add('is-active')
+            }          
+        }
+    </script>    
 </body>
 </html>
